@@ -1,0 +1,6 @@
+RewriteEngine On 
+RewriteBase /
+
+RewriteRule ^/$ index-consultas.php [L]	
+RewriteRule ^([a-zA-Z0-9-]*)$ api.php?resource_type=$1 [L]	
+RewriteRule ^([a-zA-Z0-9-]*)/([a-zA-Z0-9-]*)$ api.php?resource_type=$1&resource_id=$2 [L]	
